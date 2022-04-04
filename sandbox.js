@@ -4,5 +4,17 @@ function reverseWords(input) {
   return result;
 }
 
-console.log(reverseWords("What does this do"));
-// TITLE CASE WORDS
+// ODDISH vs EVENISH
+function oddishOrEvenish(input) {
+  const inputSplit = input
+    .toString()
+    .split("")
+    .map((digit) => Number(digit))
+    .reduce((a, b) => a + b);
+
+  if (inputSplit % 2 === 0) {
+    return "Evenish";
+  } else {
+    return "Oddish";
+  }
+}
